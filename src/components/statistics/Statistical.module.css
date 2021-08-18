@@ -1,0 +1,14 @@
+.statistics {
+  background-color: rgb(197, 228, 243);
+  width: 400px;
+  margin: 0 auto;
+}
+
+.title {
+  text-align: center;
+}
+
+ul {
+  display: flex;
+  padding: 0;
+}
