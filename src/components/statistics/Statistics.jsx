@@ -3,14 +3,14 @@ import PropTypes from "prop-types";
 import css from "./Statistical.module.css";
 
 const Statistics = ({ title, stats }) => (
-  <section class={css.statistics}>
-    <h2 class={css.title}>{title}</h2>
+  <section className={css.statistics}>
+    <h2 className={css.title}>{title}</h2>
 
-    <ul class="stat-list">
-      {stats.map(({ id, label, percentage }, i) => (
-        <li class="item">
-          <span class="label">{label}</span>
-          <span class="percentage">{percentage}%</span>
+    <ul className="stat-list">
+      {stats.map(({ id, label, percentage }) => (
+        <li className="item" key={id}>
+          <span className="label">{label}</span>
+          <span className="percentage">{percentage}%</span>
         </li>
       ))}
     </ul>
@@ -24,7 +24,7 @@ Statistics.propTypes = {
       label: PropTypes.string,
       percentage: PropTypes.number,
     })
-  ).isRequired,
+  ),
 };
 
 export default Statistics;
